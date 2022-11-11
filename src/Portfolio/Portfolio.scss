@@ -1,0 +1,52 @@
+@import "../common-css/base.scss";
+@import "../Hero/Hero";
+
+section {
+  .progCard {
+    &:hover {
+      .OutLayer {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+  }
+  .OutLayer {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    img {
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(309deg)
+        brightness(103%) contrast(103%);
+    }
+  }
+}
+.portfolio {
+  h2 {
+    font-family: "mont";
+    font-weight: bold;
+    font-size: 700;
+    font-size: 4rem;
+    color: #2c3e50;
+  }
+}
+.bordered {
+  // background-color: red;
+  width: 70%;
+  margin: auto;
+  @include bottomBorderDark;
+}
+.mainHeader {
+  font-family: "mont";
+  font-weight: bold;
+  font-size: 700;
+  font-size: 4rem;
+  color: #2c3e50;
+}

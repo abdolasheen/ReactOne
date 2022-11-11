@@ -1,0 +1,65 @@
+/*lato font import*/
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/*Montserrat font*/
+@font-face {
+  font-family: "mont";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+section {
+  padding: 6rem 0;
+}
+
+.subHeader {
+  font-family: "mont";
+  font-weight: bold;
+  font-size: 700;
+  font-size: 4rem;
+  color: #2c3e50;
+}
+
+.mainColor {
+  background-color: #1abc9c;
+}
+
+header {
+  background-color: #1abc9c;
+  padding-top: 15vh;
+  height: 140vh;
+}
+header h1 {
+  font-family: "mont";
+  font-weight: bold;
+  font-size: 700;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+}
+header p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.hero-txt .customerDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-txt .customerDivider .leftLine,
+.hero-txt .customerDivider .rightLine {
+  width: 15%;
+  height: 5px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.hero-txt .customerDivider .starIcon {
+  margin: 0 1rem;
+}
+.hero-txt .customerDivider .starIcon img {
+  width: 30px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(309deg) brightness(103%) contrast(103%);
+}/*# sourceMappingURL=Hero.css.map */
