@@ -9,6 +9,8 @@ import submarine from "../imgs/submarine.png";
 import pluse from "../imgs/pluse.svg";
 import "./Portfolio.css";
 import Card from "./Card";
+import { Link, Outlet } from "react-router-dom";
+
 let arr = [];
 arr.push(cabin, cake, circus, game, submarine, safe);
 export default function Portfolio() {

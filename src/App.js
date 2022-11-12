@@ -7,17 +7,57 @@ import Portfolio from "./Portfolio/Portfolio";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Hero from "./Hero/Hero";
-import Nav from "./Nav/Nav";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import React from "react";
+import Layout from "./Layout/Layout";
+import ErrorPage from "./ErrorPage/ErrorPage";
+import Web from "./Web/Web";
+import Moblie from "./Moblie/Moblie";
+let router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
 
+    children: [
+      {
+        index: true,
+        element: <Hero />,
+      },
+      {
+        path: "portfolio",
+        element: <Portfolio />,
+        children: [
+          {
+            path: "web",
+            element: <Web />,
+          },
+          {
+            path: "mobile",
+            element: <Moblie />,
+          },
+        ],
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
+    ],
+  },
+]);
 function App() {
   return (
     <>
-      <Nav />
-      <Hero />
-      <Portfolio />
-      <About />
-      <Contact />
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
     </>
   );
 }
