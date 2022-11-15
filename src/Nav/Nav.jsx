@@ -38,6 +38,9 @@ export default function Nav() {
               <Link className="nav-link" to="contact">
                 Contact
               </Link>
+              <Link className="nav-link" to="movies">
+                Movies
+              </Link>
             </div>
           </div>
         </div>

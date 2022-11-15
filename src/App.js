@@ -7,12 +7,14 @@ import Portfolio from "./Portfolio/Portfolio";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Hero from "./Hero/Hero";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import Layout from "./Layout/Layout";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import Web from "./Web/Web";
 import Moblie from "./Moblie/Moblie";
+import Movies from "./Movies/Movies";
+
 let router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +48,10 @@ let router = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: "movies",
+        element: <Movies />,
+      },
+      {
         path: "*",
         element: <ErrorPage />,
       },
@@ -55,9 +61,9 @@ let router = createBrowserRouter([
 function App() {
   return (
     <>
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
+      {/* <React.StrictMode> */}
+      <RouterProvider router={router} />
+      {/* </React.StrictMode> */}
     </>
   );
 }
